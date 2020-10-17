@@ -1,18 +1,13 @@
 type #Команда определения типа данных
 
-type(3)
-int
+print(type(3))
 
-type(3,4)
-float
+print(type(3,4))
 
-type('Молодец')
-str
+print(type('Молодец'))
 
-a = 'Молодец'
-print(a)
-Молодец
+a='Молодец'
+print(type(a))
 
-type([1,2,3])
-list
+print(type([1,2,3]))
 
