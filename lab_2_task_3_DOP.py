@@ -1,4 +1,4 @@
-a=int(input('Введите число:'))
+a=int(input('Введите число: '))
 if a<10 and a>-10:
   print(a)
 elif a>10 and a<100:
