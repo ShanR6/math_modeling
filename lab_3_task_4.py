@@ -9,6 +9,6 @@ for i in range(N):
       NxM[i,j] = sin(N * (i+1) + M * (j + 1))
     else:
       NxM[i,j] = sin(N * i + M * j)
-    if NxM[i,j]<0:
-      NxM[i,j] = [0,0]
+    if NxM[i,j]<0: 
+      NxM[i,j] = 0
 print(NxM)
