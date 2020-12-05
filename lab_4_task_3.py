@@ -13,5 +13,5 @@ def high(m,v,h,g):
   E1 = (m*v**2)/2
   E2 = m*g*h
   E = E1 + E2
-  print(E)
+  print(E,'- полная механическая энергия тела')
 high(m,v,h,g)
