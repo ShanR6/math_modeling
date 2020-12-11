@@ -1,8 +1,10 @@
-import numpy as np
-def sp():
-  a = 3
-  n = 4
-  for i in range(0, n):
-    a1 = a*
-  print(a1)
-sp()
+def step(a,n):
+  if n<0:
+    a = 1/a
+    n = -n
+  b = 1
+  while n>0:
+    b = b * a
+    n = n-1
+    print(b)
+step(3,9)
