@@ -16,5 +16,5 @@ def fib(n):
   while n>0:
     B=a0,a1=a1,a0+a1
     n = n-1
-    print(B)
+    print(B[0])
 fib(5)
