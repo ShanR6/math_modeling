@@ -17,5 +17,6 @@ def ris(s=3,b=1,k=2):
   x=r*np.cos(phi)
   y=r*np.sin(phi)
   plt.plot(x,y)
+  plt.axis('equal')
   plt.show()
 ris()
