@@ -1,12 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from math import pi,sin
-def lissaju(A=1,a=1,B=5,b=0.5,t=4):
-  f=pi/2
-  x=A*sin(a*t+f)
-  y=B*sin(b*t)
-  X,Y=np.meshgrid(x,y)
-  fxy= 
-  plt.contour(X,Y,fxy,[2])
+def lissaju(a=3,A=1,b=6,B=1):
+  t=np.arange(1,10,0.01)
+  D = np.pi/2
+  x=A*np.sin(a*t+D)
+  y=B*np.sin(b*t)
+  plt.plot(x,y)
   plt.show()
 lissaju()
