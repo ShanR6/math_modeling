@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-f = input('Парабола(p) или гипербола(g):')
-
+f='Парабола(p) или гипербола(g)'
 
 def ris(f,a=1,b=3,c=6,k=1,xa=-100,xb=100,N=5):
   x = np.arange(xa,xb,N)
@@ -13,4 +12,4 @@ def ris(f,a=1,b=3,c=6,k=1,xa=-100,xb=100,N=5):
     plt.title('Гипербола')
   plt.plot(x,y)
   plt.show()
-ris(f)
+ris(f='g')
