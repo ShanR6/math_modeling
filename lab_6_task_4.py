@@ -1,8 +1,28 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from math import sqrt,pi,sin
-def ris(e=1,b=3,f=4,k=5):
-  r0=e**(b*f)
-  r1=k*f
-  r2=k/sqrt(f)
-  r3=sin(k*f)
+w='логарифмическая спираль(l),архимедова спираль(ar), спираль жезл(j), роза(r)'
+def ris(w,e=1,b=3,f=4,k=5):
+  if w=='l':
+    x=np.arange(0,8*pi,0.01)
+    y=np.arange(0,8*pi,0.01)
+    X, Y = np.meshgrid(x, y)
+    r=e**(b*f)
+  elif w=='ar':
+    x=np.arange(0,8*pi,0.01)
+    y=np.arange(0,8*pi,0.01)
+    X, Y = np.meshgrid(x, y)
+    r=k*f
+  elif w=='j':
+    x=np.arange(0.01,8*pi,0.01)
+    y=np.arange(0.01,8*pi,0.01)
+    X, Y = np.meshgrid(x, y)
+    r=k/sqrt(f)
+  elif w=='r':
+    x=np.arange(0,8*pi,0.01)
+    y=np.arange(0,8*pi,0.01)
+    X, Y = np.meshgrid(x, y)
+    r=sin(k*f)
+  plt.contour(X,Y,r,levels=[2])
+  plt.show()
+ris(w='l')
