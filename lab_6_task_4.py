@@ -23,6 +23,6 @@ def ris(w,e=1,b=3,f=4,k=5):
     y=np.arange(0,8*pi,0.01)
     X, Y = np.meshgrid(x, y)
     r=sin(k*f)
-  plt.contour(X,Y,r,levels=[2])
+  plt.contour(X,Y,r,levels=[0])
   plt.show()
 ris(w='l')
