@@ -10,7 +10,7 @@ def ris(f,R):
     R1=R/4
     x=R1*np.cos(t)**3
     y=R1*np.sin(t)**3
-  plt.plot(x,y,ls='--',lw=3)
+  plt.plot(x,y,ls='-',lw=3)
   plt.axis('equal')
   plt.show()
   return x,y
