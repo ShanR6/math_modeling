@@ -59,8 +59,8 @@ def ris(f):
     ax.set_xlim(-5,5)
     ax.set_ylim(-5,5)
 
-    def update(t):
-      t = np.arange(0,12*np.pi,0.1)
+    def update(i):
+      t = 0.1*i
       x = np.sin(t)*(np.exp(np.cos(t))-2*np.cos(4*t)+np.sin(t/12)**5)
       y = np.cos(t)*(np.exp(np.cos(t))-2*np.cos(4*t)+np.sin(t/12)**5)
 
@@ -83,7 +83,7 @@ def ris(f):
     ax.set_ylim(-20,20)
 
     def update(i):
-      t = (0,2*np.pi,0.1)
+      t = 0.1*i
       x = 16*np.sin(t)**3
       y = 13*np.cos(t)-5*np.cos(2*t)-2*np.cos(3*t)-np.cos(4*t)
 
@@ -97,4 +97,4 @@ def ris(f):
     interval=30,
     )
     ani.save('lab_7_task_3.gif')
-print(ris(f='h'))
+print(ris(f='b'))
