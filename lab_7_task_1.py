@@ -3,8 +3,8 @@ import numpy as np
 def ris(f,R):
   if f=='c':
     t=np.arange(-2*np.pi, 2*np.pi, 0.1)
-    x=R*(t-np.sin(t)**3)
-    y=R*(1-np.cos(t)**3)
+    x=R*(t-np.sin(t))
+    y=R*(1-np.cos(t))
   elif f=='a':
     t=np.arange(-2*np.pi, 2*np.pi, 0.1)
     R1=R/4
