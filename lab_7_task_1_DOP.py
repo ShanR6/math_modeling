@@ -7,8 +7,8 @@ move,=plt.plot([],[],'o',color='r',label='Frak')
 
 def first(R,time):
   t=np.arange(-2*np.pi,2*np.pi,0.1)
-  x=R*(t-np.sin(t)**3)
-  y=R*(1-np.cos(t)**3)
+  x=R*(t-np.sin(t))
+  y=R*(1-np.cos(t))
   return x,y
 def second(R,time):
   t=np.arange(-2*np.pi,2*np.pi,0.1)
@@ -39,8 +39,8 @@ ax.set_xlim(-10,10)
 ax.set_ylim(-10,10)
 def update(i):
   t=0.1*i
-  x1=R*(t-np.sin(t)**3)
-  y1=R*(1-np.cos(t)**3)
+  x1=R*(t-np.sin(t))
+  y1=R*(1-np.cos(t))
   x2=(R/4)*np.cos(t)**3
   y2=(R/4)*np.sin(t)**3
   move.set_data(x1,y1)
