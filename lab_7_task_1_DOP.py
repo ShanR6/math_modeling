@@ -28,7 +28,7 @@ def update(i):
   ydata.append(ne_circle_move(R=2,t=i)[1])
   move.set_data(xdata,ydata)
   point.set_data(ne_circle_move(R=2,t=i)[0],ne_circle_move(R=2,t=i)[1])
-  circle.set_data(circle_move(R=4.5,vx0=1,vy0=0,t=i))
+  circle.set_data(circle_move(R=4.2,vx0=2,vy0=0,t=i))
 ani = FuncAnimation(fig,
 update,
 frames=np.arange(0,4*np.pi,0.1),
