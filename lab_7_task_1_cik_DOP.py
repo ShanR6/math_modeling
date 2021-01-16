@@ -19,7 +19,6 @@ def circle_move(R,vx0,vy0,i):
   y2=y0+R*np.sin(alpha)
   return x2,y2
 xdata,ydata=[],[]
-xline,yline=[],[]
 edge=20
 plt.axis('equal')
 ax.set_xlim(-4*edge,6*edge)
