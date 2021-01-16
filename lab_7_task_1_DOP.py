@@ -6,7 +6,6 @@ fig,ax=plt.subplots()
 move,=plt.plot([],[],'-',color='r',label='Frak')
 point,=plt.plot([],[],'o',color='r')
 circle,=plt.plot([],[],'-',color='r')
-line,=plt.plot([],[],'-',color='r')
 def ne_circle_move(R,i):
   t=np.linspace(0,4*np.pi,500)
   x1=R*(t[i]-np.sin(t[i]))
@@ -32,12 +31,9 @@ def update(i):
   move.set_data(xdata,ydata)
   point.set_data(ne_circle_move(R=4,i=i)[0],ne_circle_move(R=4,i=i)[1])
   circle.set_data(circle_move(R=4,vx0=1.6,vy0=0,i=i))
-  xline.append()
-  yline.append()
-  line.set_data(xline,yline)
 ani = FuncAnimation(fig,
 update,
 frames=500,
 interval=30
 )
-ani.save('lab_7_task_1_DOP.gif')
+ani.save('lab_7_task_1_cik_DOP.gif')
