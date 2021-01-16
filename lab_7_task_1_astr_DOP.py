@@ -6,6 +6,7 @@ fig,ax=plt.subplots()
 move,=plt.plot([],[],'-',color='r',label='Frak')
 point,=plt.plot([],[],'o',color='r')
 circle,=plt.plot([],[],'-',color='r')
+plt.plot(8*np.sin(np.arange(0,2*np.pi,0.1)),8*np.cos(np.arange(0,2*np.pi,0.1)))
 def ne_circle_move(R,i):
   t=np.linspace(0,4*np.pi,500)
   x1=R*np.cos(t[i])**3
@@ -20,7 +21,6 @@ def circle_move(R,vx0,vy0,i):
   y2=y0+R*np.sin(alpha)
   return x2,y2
 xdata,ydata=[],[]
-xline,yline=[],[]
 edge=20
 plt.axis('equal')
 ax.set_xlim(-5*edge,6*edge)
