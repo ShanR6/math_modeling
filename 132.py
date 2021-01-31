@@ -12,11 +12,26 @@ ball5, = plt.plot([], [], '-', color='b')
 ball6, = plt.plot([], [], '-', color='b')
 ball7, = plt.plot([], [], '-', color='b')
 ball8, = plt.plot([], [], '-', color='b')
+ball9, = plt.plot([], [], '-', color='b')
+ball10, = plt.plot([], [], '-', color='b')
+ball11, = plt.plot([], [], '-', color='b')
+ball12, = plt.plot([], [], '-', color='b')
+ball13, = plt.plot([], [], '-', color='b')
+ball14, = plt.plot([], [], '-', color='b')
+ball15, = plt.plot([], [], '-', color='b')
+ball16, = plt.plot([], [], '-', color='b')
+ball17, = plt.plot([], [], '-', color='b')
+ball18, = plt.plot([], [], '-', color='b')
+ball19, = plt.plot([], [], '-', color='b')
+ball20, = plt.plot([], [], '-', color='b')
 
 
 def circle_move(phi, time, t):
+    if t >= 90:
+        a = 0.00001 * 70 * t
+    else:
+        a = 0.00001 * t
     vy0 = 0.02 * t
-    a = 0.001 * t
     y0 = vy0 * time
     alpha = a * (np.pi / 180) * time
     R = alpha * time
@@ -26,8 +41,11 @@ def circle_move(phi, time, t):
 
 
 def circle_move1(phi, time, t):
+    if t >= 90:
+        a = 0.00001 * 70 * t
+    else:
+        a = 0.00001 * t
     vy0 = 0.02 * t
-    a = 0.001 * t
     y0 = vy0 * time
     alpha = a * (np.pi / 180) * time
     R = alpha * time
@@ -37,8 +55,11 @@ def circle_move1(phi, time, t):
 
 
 def circle_move2(phi, time, t):
+    if t >= 90:
+        a = 0.000016 * 70 * t
+    else:
+        a = 0.000016 * t
     vy0 = 0.023 * t
-    a = 0.0016 * t
     y0 = vy0 * time
     alpha = a * (np.pi / 180) * time
     R = alpha * time
@@ -48,8 +69,11 @@ def circle_move2(phi, time, t):
 
 
 def circle_move3(phi, time, t):
+    if t >= 90:
+        a = 0.000018 * 50 * t
+    else:
+        a = 0.000018 * t
     vy0 = 0.029 * t
-    a = 0.0018 * t
     y0 = vy0 * time
     alpha = a * (np.pi / 180) * time
     R = alpha * time
@@ -59,8 +83,11 @@ def circle_move3(phi, time, t):
 
 
 def circle_move4(phi, time, t):
+    if t >= 90:
+        a = 0.000014 * 50 * t
+    else:
+        a = 0.000014 * t
     vy0 = 0.022 * t
-    a = 0.0014 * t
     y0 = vy0 * time
     alpha = a * (np.pi / 180) * time
     R = alpha * time
@@ -70,8 +97,11 @@ def circle_move4(phi, time, t):
 
 
 def circle_move5(phi, time, t):
+    if t >= 90:
+        a = 0.000011 * 50 * t
+    else:
+        a = 0.000011 * t
     vy0 = 0.026 * t
-    a = 0.0011 * t
     y0 = vy0 * time
     alpha = a * (np.pi / 180) * time
     R = alpha * time
@@ -81,8 +111,11 @@ def circle_move5(phi, time, t):
 
 
 def circle_move6(phi, time, t):
+    if t >= 90:
+        a = 0.0000112 * 50 * t
+    else:
+        a = 0.0000112 * t
     vy0 = 0.0234 * t
-    a = 0.00112 * t
     y0 = vy0 * time
     alpha = a * (np.pi / 180) * time
     R = alpha * time
@@ -92,8 +125,11 @@ def circle_move6(phi, time, t):
 
 
 def circle_move7(phi, time, t):
+    if t >= 90:
+        a = 0.0000193 * 50 * t
+    else:
+        a = 0.0000193 * t
     vy0 = 0.0272 * t
-    a = 0.00193 * t
     y0 = vy0 * time
     alpha = a * (np.pi / 180) * time
     R = alpha * time
@@ -103,8 +139,11 @@ def circle_move7(phi, time, t):
 
 
 def circle_move8(phi, time, t):
+    if t >= 90:
+        a = 0.0000194 * 50 * t
+    else:
+        a = 0.0000194 * t
     vy0 = 0.0272 * t
-    a = 0.00194 * t
     y0 = vy0 * time
     alpha = a * (np.pi / 180) * time
     R = alpha * time
@@ -113,9 +152,177 @@ def circle_move8(phi, time, t):
     return x, y
 
 
-edge = 140
+def circle_move9(phi, time, t):
+    if t >= 90:
+        a = 0.00001964 * 50 * t
+    else:
+        a = 0.00001964 * t
+    vy0 = 0.02722 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) - 50
+    y = y0 + R * np.sin(phi) + 5
+    return x, y
+
+
+def circle_move10(phi, time, t):
+    if t >= 90:
+        a = 0.0000195744 * 50 * t
+    else:
+        a = 0.0000195744 * t
+    vy0 = 0.02672 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) - 55
+    y = y0 + R * np.sin(phi) + 35
+    return x, y
+
+
+def circle_move11(phi, time, t):
+    if t >= 90:
+        a = 0.0000192454 * 50 * t
+    else:
+        a = 0.0000192454 * t
+    vy0 = 0.0276262 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) + 3
+    y = y0 + R * np.sin(phi) - 10
+    return x, y
+
+
+def circle_move12(phi, time, t):
+    if t >= 90:
+        a = 0.000019744 * 50 * t
+    else:
+        a = 0.000019744 * t
+    vy0 = 0.0272 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) - 20
+    y = y0 + R * np.sin(phi) - 20
+    return x, y
+
+
+def circle_move13(phi, time, t):
+    if t >= 90:
+        a = 0.0000193674 * 50 * t
+    else:
+        a = 0.0000193674 * t
+    vy0 = 0.0274672 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) - 45
+    y = y0 + R * np.sin(phi) - 13
+    return x, y
+
+
+def circle_move14(phi, time, t):
+    if t >= 90:
+        a = 0.000019446424 * 50 * t
+    else:
+        a = 0.000019446424 * t
+    vy0 = 0.02724235 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) + 35
+    y = y0 + R * np.sin(phi) - 30
+    return x, y
+
+
+def circle_move15(phi, time, t):
+    if t >= 90:
+        a = 0.00001937634 * 50 * t
+    else:
+        a = 0.00001937634 * t
+    vy0 = 0.0273672 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) + 50
+    y = y0 + R * np.sin(phi) - 3
+    return x, y
+
+
+def circle_move16(phi, time, t):
+    if t >= 90:
+        a = 0.0000193674 * 50 * t
+    else:
+        a = 0.0000193674 * t
+    vy0 = 0.02757632 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) + 6
+    y = y0 + R * np.sin(phi) - 12
+    return x, y
+
+
+def circle_move17(phi, time, t):
+    if t >= 90:
+        a = 0.000019284 * 50 * t
+    else:
+        a = 0.000019284 * t
+    vy0 = 0.0273732 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) + 55
+    y = y0 + R * np.sin(phi) - 4
+    return x, y
+
+
+def circle_move18(phi, time, t):
+    if t >= 90:
+        a = 0.0000190384 * 50 * t
+    else:
+        a = 0.0000190384 * t
+    vy0 = 0.0279452 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) - 11
+    y = y0 + R * np.sin(phi) - 30
+    return x, y
+
+
+def circle_move19(phi, time, t):
+    if t >= 90:
+        a = 0.0000199254 * 50 * t
+    else:
+        a = 0.0000199254 * t
+    vy0 = 0.0282572 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) + 40
+    y = y0 + R * np.sin(phi) - 1
+    return x, y
+
+
+def circle_move20(phi, time, t):
+    if t >= 90:
+        a = 0.000019279324 * 50 * t
+    else:
+        a = 0.000019279324 * t
+    vy0 = 0.0272157 * t
+    y0 = vy0 * time
+    alpha = a * (np.pi / 180) * time
+    R = alpha * time
+    x = R * np.cos(phi) - 55
+    y = y0 + R * np.sin(phi) - 20
+    return x, y
+
+
+edge = 200
 plt.axis('equal')
-ax.set_xlim(-80, 80)
+ax.set_xlim(-edge, edge)
 ax.set_ylim(0, edge)
 
 
@@ -129,11 +336,23 @@ def animate(i):
     ball6.set_data(circle_move6(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
     ball7.set_data(circle_move7(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
     ball8.set_data(circle_move8(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball9.set_data(circle_move9(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball10.set_data(circle_move10(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball11.set_data(circle_move11(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball12.set_data(circle_move12(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball13.set_data(circle_move13(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball14.set_data(circle_move14(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball15.set_data(circle_move15(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball16.set_data(circle_move16(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball17.set_data(circle_move17(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball18.set_data(circle_move18(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball19.set_data(circle_move19(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
+    ball20.set_data(circle_move20(phi=np.linspace(0, 2 * np.pi, 50), time=i, t=100))
 
 
 ani = FuncAnimation(fig,
                     animate,
-                    frames=100,
+                    frames=200,
                     interval=30
                     )
 ani.save('kipenie.gif')
