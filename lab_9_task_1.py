@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 t = np.arange(0, 100, 1)
 
 def radio_function(N, t):
-  dmdt = k * N
-  return dmdt
+  dNdt = k * N
+  return dNdt
 
 N_0 = 10
 k = 1/20
