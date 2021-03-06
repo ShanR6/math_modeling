@@ -6,7 +6,7 @@ t = np.arange(0, 10, 1)
 
 
 def radio_function(N, t):
-    dNdt = k * N * t
+    dNdt = - k * N * t
     return dNdt
 
 
