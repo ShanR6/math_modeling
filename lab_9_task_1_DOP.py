@@ -1,26 +1,21 @@
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
-
-t = np.arange(0, 10 ** 3, 10)
-
-
-def radio_function(v, t):
-    dNdt = F * v
-    return dNdt
+h0 = 10000
+x = np.arange(0,h0)
 
 
-MM = 6 * 10 ** 10
+def radio_function(v, x):
+  dvdt = F/v
+  return dvdt
+
 MZ = 6 * 10 ** 24
 G = 6.67 * 10 ** -11
-h = 100
-F = (G * MM * MZ) / (h ** 2)
-v_0 = h/t
+R = 6371 * 10**3
+F = (G * MZ) / ((R +h0) ** 2)
+v_0 = 3
 
-solve_Bi = odeint(radio_function, v_0, t)
+solve_Bi = odeint(radio_function, v_0, x)
 
-plt.plot(t, solve_Bi[:, 0])
+plt.plot(x, solve_Bi[:, 0])
 plt.show()
-'''
-КОПЕЦ КОНЕЧНО
-'''
