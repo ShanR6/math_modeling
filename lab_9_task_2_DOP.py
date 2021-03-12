@@ -2,20 +2,25 @@ import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
-t = np.arange(0,24,1)
+t = np.arange(0, 24, 1)
 
 
 def radio_function(S, t):
-  dvdt = R/S
-  return dvdt
-if t==0:
-  S_0 = 1600 * 10**-4
-elif t == 12:
-  S_0 = 2500 * 10**-4
-if t == 18:
-  cos = 90
-S=2*np.pi**2
-R = np.sqrt(S)/np.pi
+    dvdt = R * ((S * np.cos(ugol)) * gg)
+    return dvdt
+
+
+S_0 = 0
+if np.any(t == 0):
+    S_0 = 1600 * 10 ** -4
+elif np.any(t == 12):
+    S_0 = 2500 * 10 ** -4
+if np.any(t == 18) or np.any(t == 6):
+    ugol = 90
+elif np.any(0 <= t <= 12):
+    ugol = 0
+R = 5
+S = np.pi * R ** 2
 gg = 1370
 solve_Bi = odeint(radio_function, S_0, t)
 
