@@ -8,12 +8,12 @@ def diff_func(z, t):
   w, y = z
 
   dy_dt = w
-  dw_dt = -4 * (y/t) - 5 * y
+  dw_dt = -4 * w - 5 * y
 
   return dy_dt, dw_dt
 
-y0 = 3
-w0 = 0
+y0 = 4
+w0 = -1
 
 z0 = w0, y0
 
