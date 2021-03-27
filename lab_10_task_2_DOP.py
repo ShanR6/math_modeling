@@ -8,7 +8,7 @@ x = np.arange(0, 5, 0.1)
 def diff_func(z, x):
     w, y = z
     dy_dx = w
-    dw_dx = (-3*y**2)/(np.sqrt(x)*(y-x/w))
+    dw_dx = (w - ((3*y**2)/np.sqrt(x)))/y
     return dy_dx, dw_dx
 
 
