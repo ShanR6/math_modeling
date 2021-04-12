@@ -11,7 +11,7 @@ t = np.linspace(0, years*seconds_in_year, frames)
 
 # Определяем функцию для системы диф. уравнений
 def move_func(s, t):
-    (x1, v_x1, y1, v_y1,
+     (x1, v_x1, y1, v_y1,
      x2, v_x2, y2, v_y2,
      x3, v_x3, y3, v_y3,
      x4, v_x4, y4, v_y4,
@@ -78,7 +78,10 @@ y50 = 2.99196 * 10**11
 v_y50 = 0
 
 s0 = (x10, v_x10, y10, v_y10,
-      x20, v_x20, y20, v_y20)
+      x20, v_x20, y20, v_y20,
+      x30, v_x30, y30, v_y30,
+      x40, v_x40, y40, v_y40,
+      x50, v_x50, y50, v_y50,)
 
 # Решаем систему диф. уравнений
 def solve_func(i, key):
