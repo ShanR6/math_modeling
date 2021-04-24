@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 # Определяем переменную величину
-frames = 365
+frames = 100
 seconds_in_year = 365 * 24 * 60 * 60
 years = 1
 t = np.linspace(0, years * seconds_in_year, frames)
@@ -123,14 +123,14 @@ ball_line1, = plt.plot([], [], '-', color='b')
 ball2, = plt.plot([], [], 'o', color='r')
 ball_line2, = plt.plot([], [], '-', color='r')
 
-ball3, = plt.plot([], [], 'o', color='lime')
-ball_line3, = plt.plot([], [], '-', color='lime')
+ball3, = plt.plot([], [], 'o', color='g')
+ball_line3, = plt.plot([], [], '-', color='g')
 
-ball4, = plt.plot([], [], 'o', color='gold')
-ball_line4, = plt.plot([], [], '-', color='gold')
+ball4, = plt.plot([], [], 'o', color='k')
+ball_line4, = plt.plot([], [], '-', color='k')
 
-ball5, = plt.plot([], [], 'o', color='magenta')
-ball_line5, = plt.plot([], [], '-', color='magenta')
+ball5, = plt.plot([], [], 'o', color='c')
+ball_line5, = plt.plot([], [], '-', color='c')
 
 plt.plot([0], [0], 'o', color='y', ms=20)
 
