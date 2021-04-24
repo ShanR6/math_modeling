@@ -39,9 +39,9 @@ def move_func(s, t):
     dv_ydt4 = - G * m * y4 / (x4 ** 2 + y4 ** 2) ** 1.5
 
     dxdt5 = v_x5
-    dv_xdt5 = - G * m * x5 / (x1 ** 2 + y1 ** 2) ** 1.5
+    dv_xdt5 = - G * m * x5 / (x5 ** 2 + y5 ** 2) ** 1.5
     dydt5 = v_y5
-    dv_ydt5 = - G * m * y5 / (x1 ** 2 + y1 ** 2) ** 1.5
+    dv_ydt5 = - G * m * y5 / (x5 ** 2 + y5 ** 2) ** 1.5
 
     return (dxdt1, dv_xdt1, dydt1, dv_ydt1,
             dxdt2, dv_xdt2, dydt2, dv_ydt2,
@@ -64,14 +64,14 @@ v_x20 = -47360
 y20 = 0.387 * 149 * 10 ** 9
 v_y20 = 0
 
-x30 = - 108 * 10 ** 6
+x30 = - 108 * 10 ** 9
 v_x30 = 0
 y30 = 0
-v_y30 = - 35 * 10 ** 3
+v_y30 = -35000
 
 x40 = 0
-v_x40 = -24.13 * 10 ** 3
-y40 = 228 * 10 ** 6
+v_x40 = -24138
+y40 = 228 * 10 ** 9
 v_y40 = 0
 
 x50 = 0
@@ -123,14 +123,14 @@ ball_line1, = plt.plot([], [], '-', color='b')
 ball2, = plt.plot([], [], 'o', color='r')
 ball_line2, = plt.plot([], [], '-', color='r')
 
-ball3, = plt.plot([], [], 'o', color='g')
-ball_line3, = plt.plot([], [], '-', color='g')
+ball3, = plt.plot([], [], 'o', color='lime')
+ball_line3, = plt.plot([], [], '-', color='lime')
 
-ball4, = plt.plot([], [], 'o', color='m')
-ball_line4, = plt.plot([], [], '-', color='m')
+ball4, = plt.plot([], [], 'o', color='gold')
+ball_line4, = plt.plot([], [], '-', color='gold')
 
-ball5, = plt.plot([], [], 'o', color='k')
-ball_line5, = plt.plot([], [], '-', color='k')
+ball5, = plt.plot([], [], 'o', color='magenta')
+ball_line5, = plt.plot([], [], '-', color='magenta')
 
 plt.plot([0], [0], 'o', color='y', ms=20)
 
@@ -151,13 +151,14 @@ def animate(i):
     ball5.set_data(solve_func(i, 'point')[4])
     ball_line5.set_data(solve_func(i, 'line')[4])
 
+
 ani = FuncAnimation(fig,
                     animate,
                     frames=frames,
                     interval=30)
 
 plt.axis('equal')
-edge = 2 * x10
+edge = 4 * x10
 ax.set_xlim(-edge, edge)
 ax.set_ylim(-edge, edge)
 
